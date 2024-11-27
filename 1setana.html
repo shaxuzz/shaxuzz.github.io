@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script src="testplayer.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        #player {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="player"></div>
+    <script>
+        // Ensure the Playerjs object is available
+        if (typeof Playerjs === 'function') {
+            const player = new Playerjs({
+                id: "player",
+                file: "https://fl.biztv.media/Setanta1/playlist.m3u8"
+            });
+        } else {
+            console.error("Playerjs library not loaded.");
+        }
+    </script>
+</body>
+</html>

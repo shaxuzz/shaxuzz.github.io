@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Video Player</title>
+    <script src="testplayer.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        #player-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        #player {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="player-container">
+        <div id="player"></div>
+    </div>
+    <script>
+        // Ensure Playerjs is properly initialized
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof Playerjs === "function") {
+                new Playerjs({
+                    id: "player",
+                    file: "https://fl.biztv.media/Setanta1/playlist.m3u8"
+                });
+            } else {
+                console.error("Playerjs library not loaded.");
+            }
+        });
+    </script>
+</body>
+</html>
