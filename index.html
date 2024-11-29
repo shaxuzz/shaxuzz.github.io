@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setana TV</title>
-	    <link rel="icon" href="icon.png" type="image/x-icon" />
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online TV
+  </title>
+  <link href="icon.png" rel="icon" type="image/x-icon"/>
+  <style>
+   body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -27,6 +29,11 @@
             border-radius: 5px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            height: 20vh;
+            width: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .image-container a:hover {
             transform: scale(1.05);
@@ -37,19 +44,59 @@
             width: 100%;
             max-width: 500px;
             height: auto;
+            
+
         }
-    </style>
-</head>
-<body>
+    
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .block {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .block.left {
+            align-items: flex-end;
+        }
+        .block.right {
+            align-items: flex-start;
+        }
+        .block .image-container {
+            width: 70%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="block left">
     <div class="image-container">
-        <a href="1setana" target="_blank">
-            <img src="SetantaSport1.png" alt="Rasm 1">
-        </a>
+     <a href="https://shaxuzz.github.io/1setana" target="_blank">
+      <img alt="Rasm 1" src="SetantaSport1.png"/>
+     </a>
     </div>
     <div class="image-container">
-        <a href="2setana" target="_blank">
-            <img src="SetanaSport2.png" alt="Rasm 2">
-        </a>
+     <a href="https://shaxuzz.github.io/3match" target="_blank">
+      <img alt="Rasm 2" src="match.png"/>
+     </a>
     </div>
-</body>
+   </div>
+   <div class="block right">
+    <div class="image-container">
+     <a href="https://shaxuzz.github.io/2setana" target="_blank">
+      <img alt="Rasm 2" src="SetanaSport2.png"/>
+     </a>
+    </div>
+    <div class="image-container">
+     <a href="https://shaxuzz.github.io/4match1" target="_blank">
+      <img alt="Rasm 2" src="match-futbol-1.png"/>
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
