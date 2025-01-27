@@ -3,9 +3,7 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Online TV
-  </title>
+  <title>Online TV</title>
   <link href="icon.png" rel="icon" type="image/x-icon"/>
   <style>
    body {
@@ -18,12 +16,11 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            width: 50vh;
+            width: 100%;
         }
         .image-container {
             margin: 10px 0;
             text-align: center;
-
             align-items: center;
             justify-content: center;
         }
@@ -45,51 +42,67 @@
             display: block;
             width: 100%;
             max-width: 500px;
-            
             align-items: center;
             justify-content: center;
-
         }
-    
         .container {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
             width: 100%;
+            flex-wrap: wrap;
         }
         .block {
-            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            max-width: 20vh;
+            min-width: 180px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .block {
+                max-width: 90%;
+                min-width: 150px;
+            }
         }
   </style>
  </head>
  <body>
   <div class="container">
-   <div class="block left">
-    <div class="image-container">
-     <a href="https://shaxuzz.github.io/1setana" target="_blank">
-      <img alt="Rasm 1" src="SetantaSport1.png"/>
-     </a>
+    <div class="block">
+        <div class="image-container">
+         <a href="https://shaxuzz.github.io/1setana" target="_blank">
+          <img alt="Rasm 1" src="png/SetantaSport1.png"/>
+         </a>
+        </div>
+        <div class="image-container">
+         <a href="https://shaxuzz.github.io/3match" target="_blank">
+          <img alt="Rasm 2" src="png/match.png"/>
+         </a>
+        </div>
+        <div class="image-container">
+         <a href="https://shaxuzz.github.io/2setana" target="_blank">
+          <img alt="Rasm 2" src="png/SetanaSport2.png"/>
+         </a>
+        </div>
+        <div class="image-container">
+         <a href="https://shaxuzz.github.io/4match1" target="_blank">
+          <img alt="Rasm 4" src="png/match-futbol-1.png"/>
+         </a>
+        </div>
+        <div class="image-container">
+            <a href="https://shaxuzz.github.io/5match" target="_blank">
+             <img alt="Rasm 5" src="png/matchtv.png"/>
+            </a>
+        </div>
     </div>
-    <div class="image-container">
-     <a href="https://shaxuzz.github.io/3match" target="_blank">
-      <img alt="Rasm 2" src="match.png"/>
-     </a>
-   </div>
-   <div class="block right">
-    <div class="image-container">
-     <a href="https://shaxuzz.github.io/2setana" target="_blank">
-      <img alt="Rasm 2" src="SetanaSport2.png"/>
-     </a>
-    </div>
-    <div class="image-container">
-     <a href="https://shaxuzz.github.io/4match1" target="_blank">
-      <img alt="Rasm 4" src="match-futbol-1.png"/>
-     </a>
-    </div>
-   </div>
   </div>
  </body>
 </html>
